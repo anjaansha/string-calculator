@@ -34,4 +34,9 @@ describe('String Calculator', () => {
       'Negative numbers not allowed: -2, -3'
     );
   });
+  
+  test('handles newlines as delimiters', () => {
+    expect(calculator.add('1\n2,3')).toBe(6);
+    expect(calculator.add('4\n5\n6')).toBe(15);
+  });
 });
